@@ -4,6 +4,23 @@
 # Difficulty: easy.
 
 def sum_nums(num)
+   final_num = nil
+    i = 0
+   while i < num
+    if final_num == nil
+       final_num = num
+       
+    else
+       number = num - i
+       final_num = final_num + number
+    end
+    
+    i = i + 1
+   
+   
+   
+   end
+   return final_num
 end
 
 # These are tests to check that your code is working. After writing
