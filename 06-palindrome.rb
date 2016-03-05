@@ -5,8 +5,9 @@
 #
 # Difficulty: easy.
 
-def palindrome?(string)
-    string = 
+def palindrome(string)
+    looparray = []
+    
 end
 
 # These are tests to check that your code is working. After writing
