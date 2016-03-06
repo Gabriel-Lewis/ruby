@@ -5,8 +5,22 @@
 #
 # Difficulty: easy.
 
-def palindrome(string)
+def palindrome?(string)
     looparray = []
+    i = string.length - 1
+    
+    while i >= 0
+       looparray.push(string[i])
+        i = i - 1
+        word = looparray.join
+    end
+    
+    if word == string
+        return true
+    else 
+        return false
+    end
+        
     
 end
 
