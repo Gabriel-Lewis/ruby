@@ -5,6 +5,28 @@
 # Difficulty: medium.
 
 def two_sum(nums)
+  i = 0
+  first_var = 0
+  second_var = 0
+  third_var = 0
+  #zero_present = false
+  
+  while i < nums.length
+    x = 1
+    first_var = nums[i]
+    second_var = nums[x]
+    third_var = second_var + first_var
+    
+    if third_var == 0
+      return([x, i])
+    
+     
+    else
+      x += 1
+      i += 1
+    end
+  end
+  return nil
 end
 
 # These are tests to check that your code is working. After writing
@@ -16,3 +38,4 @@ puts(
 puts(
   'two_sum([1, 3, 5]) == nil: ' + (two_sum([1, 3, 5]) == nil).to_s
 )
+
