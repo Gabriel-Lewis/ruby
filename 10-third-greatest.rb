@@ -5,6 +5,39 @@
 # Difficulty: medium.
 
 def third_greatest(nums)
+    i = 0
+    largest = nil
+    second = nil
+    third = nil
+    
+    while i < nums.length
+        num = nums[i]
+        
+        if largest == nil
+            largest = num
+        elsif largest < num
+            third = second
+            second = largest
+            largest = num
+        elsif largest > num
+            if second == nil
+                second = num
+            elsif second < num
+                third = second
+                second = num
+            elsif second > num
+                if third == nil
+                    third = num
+                elsif third < num 
+                    third = num
+                end
+            end
+        end
+        i = i + 1
+    end
+  
+    return(third)
+    
 end
 
 # These are tests to check that your code is working. After writing
