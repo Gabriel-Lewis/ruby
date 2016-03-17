@@ -8,6 +8,24 @@
 # Difficulty: medium.
 
 def dasherize_number(num)
+  string = num.to_s
+  array = string.split("")
+  i = 0
+  
+  while i < array.length
+    if array[i].to_i % 2 != 0
+      if i == 0
+        array[i] = "#{string[i]}-"
+      elsif i == array.length - 1 
+        array[i] = "-#{string[i]}"
+      end
+      
+    end
+    i += 1
+    
+  end
+  return(array.join.to_s)
+  
 end
 
 # These are tests to check that your code is working. After writing
