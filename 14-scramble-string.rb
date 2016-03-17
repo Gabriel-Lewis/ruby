@@ -5,6 +5,18 @@
 # Difficulty: medium.
 
 def scramble_string(string, positions)
+  scramble = []
+  
+  idx = 0
+  
+  while idx < positions.length
+      position = positions[idx]
+      letter = string[position]
+      scramble[idx] = letter
+    idx += 1
+  end
+  
+  return(scramble.join)
 end
 
 # These are tests to check that your code is working. After writing
