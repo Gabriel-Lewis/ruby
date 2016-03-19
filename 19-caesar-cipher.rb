@@ -24,6 +24,7 @@
 # information, we would not give it to you on the timed challenge. :-)
 
 def caesar_cipher(offset, string)
+  
 end
 
 # These are tests to check that your code is working. After writing

@@ -7,7 +7,33 @@
 # Difficulty: hard.
 
 def num_repeats(string)
+    i = 0 
+    count = 0
+    check = nil
     
+    while i < string.length
+        letter = string[i]
+        i2 = 1 
+        while i2 < string.length
+            letter2 = string[i2]
+            
+            if i < i2
+                if letter == letter2
+                    if check == nil
+                        check = letter
+                        count += 1
+                    elsif letter != check
+                        count += 1
+                        check = letter
+                    end
+                end
+            end
+            
+            i2 += 1
+        end
+        i += 1
+    end
+    return(count)
 end
 
 # These are tests to check that your code is working. After writing
