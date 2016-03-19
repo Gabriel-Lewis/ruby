@@ -30,7 +30,40 @@ def palindrome?(string)
 end
 
 def longest_palindrome(string)
+  i = 0
+  p_count = 0
+  largest_slice_count = nil
+  largest_slice = nil
+  while i < string.length
+    i2 = 0
+    while i2 <= string.length
+      slice = string.slice(i, i2)
+      if slice == ""
+       
+      else
+          
+        if palindrome?(slice) == true
+          p_count = slice.length
+          
+          if largest_slice_count == nil
+            largest_slice_count = p_count
+            largest_slice = slice
+          elsif largest_slice_count < p_count
+            largest_slice_count = p_count
+            largest_slice = slice
+          end
+          
+        end
+      end
+      
+      i2 += 1
+    end
+    
+    i += 1
+  end
+  return(largest_slice)
 end
+
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
